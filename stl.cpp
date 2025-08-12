@@ -391,26 +391,25 @@ void explainExtra()
     /// Consider following pair array
     // sort is according to second element
     //  if second element is same then sort it acccording to the first element but in descending order
-    pair<int, int> pa[] = {{1,2}, {2,1}, {4,1}};
-    auto paL = sizeof(pa)/sizeof(pa[0]);
+    pair<int, int> pa[] = {{1, 2}, {2, 1}, {4, 1}};
+    auto paL = sizeof(pa) / sizeof(pa[0]);
     sort(pa, pa + paL, comp); // t
 
     string s = "123";
     do
     {
         /* code */
-        cout<<s<<endl;
+        cout << s << endl;
     } while (next_permutation(s.begin(), s.end()));
-    int  maxi = * max_element(a, a+n);
-        
-
+    int maxi = *max_element(a, a + n);
 }
 
-bool comp(const pair<int,int> &a, const pair<int,int> &b) { /// This method is for comparision
-        if (a.second == b.second)
-            return a.first > b.first; // descending for first element
-        return a.second < b.second;   // ascending for second element
-    }
+bool comp(const pair<int, int> &a, const pair<int, int> &b)
+{ /// This method is for comparision
+    if (a.second == b.second)
+        return a.first > b.first; // descending for first element
+    return a.second < b.second;   // ascending for second element
+}
 
 int main()
 {
